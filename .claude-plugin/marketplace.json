@@ -29,34 +29,6 @@
       "description": "Atualiza cirurgicamente um CONTEXT.md existente perguntando antes de escrever",
       "category": "documentation",
       "keywords": ["context", "documentation", "refinement"]
-    },
-    {
-      "name": "grill-me",
-      "source": "./plugins/grill-me",
-      "description": "Entrevista relentlessly sobre planos e designs até atingir entendimento compartilhado",
-      "category": "design",
-      "keywords": ["design", "planning", "interview", "decision-making"]
-    },
-    {
-      "name": "grill-with-docs",
-      "source": "./plugins/grill-with-docs",
-      "description": "Grilling que desafia planos contra o modelo de domínio e atualiza CONTEXT.md e ADRs inline",
-      "category": "design",
-      "keywords": ["design", "domain", "adr", "documentation", "grilling"]
-    },
-    {
-      "name": "improve-codebase-architecture",
-      "source": "./plugins/improve-codebase-architecture",
-      "description": "Encontra oportunidades de deepening arquitetural — refactors que transformam módulos rasos em profundos",
-      "category": "architecture",
-      "keywords": ["architecture", "refactoring", "design", "modules", "depth"]
-    },
-    {
-      "name": "find-skills",
-      "source": "./plugins/find-skills",
-      "description": "Descobre e instala skills do ecossistema open agent skills via npx skills",
-      "category": "productivity",
-      "keywords": ["skills", "discovery", "marketplace", "extensions"]
     }
   ]
 }
