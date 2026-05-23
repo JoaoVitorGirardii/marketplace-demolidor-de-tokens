@@ -9,7 +9,7 @@ Skills para o Claude Code desenvolvidas e refinadas por mim ao longo do tempo. C
 | `analyze-codebase` | Analisa o código-fonte e gera um `CONTEXT.md` otimizado para o Claude Code — regras, contratos e padrões que guiam o modelo em sessões futuras |
 | `refine-context` | Atualiza cirurgicamente um `CONTEXT.md` existente: faz perguntas antes de escrever, nunca presume intenção |
 | `merge-from-master` | Traz as alterações do `master`/`main` para a branch atual via merge; aborta automaticamente se houver conflitos |
-| `conversa-com-engenheiro` | Conduz entrevista técnica iterativa como Staff Engineer especializado em NestJS, TypeScript, Vue.js, TypeORM, Sequelize e microsserviços — desafia planos, encontra riscos ocultos e produz documento de implementação estruturado |
+| `engenheiro-paranoico` | Conduz entrevista técnica iterativa como Staff Engineer especializado em NestJS, TypeScript, Vue.js, TypeORM, Sequelize e microsserviços — desafia planos, encontra riscos ocultos e produz documento de implementação estruturado |
 
 ## Como instalar
 
@@ -32,7 +32,7 @@ Instale um plugin específico apontando para o diretório dele:
 claude plugin install ./plugins/analyze-codebase
 claude plugin install ./plugins/refine-context
 claude plugin install ./plugins/merge-from-master
-claude plugin install ./plugins/conversa-com-engenheiro
+claude plugin install ./plugins/engenheiro-paranoico
 ```
 
 Ou instale todos de uma vez:
@@ -49,7 +49,7 @@ Após instalar, as skills ficam disponíveis como slash commands em qualquer pro
 /analyze-codebase
 /refine-context
 /merge-from-master
-/conversa-com-engenheiro
+/engenheiro-paranoico
 ```
 
 ### Atualizando
