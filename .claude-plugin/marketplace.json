@@ -31,8 +31,8 @@
       "keywords": ["context", "documentation", "refinement"]
     },
     {
-      "name": "staff-engineer",
-      "source": "./plugins/staff-engineer",
+      "name": "conversa-com-engenheiro",
+      "source": "./plugins/conversa-com-engenheiro",
       "description": "Conduz entrevista técnica iterativa como Staff Engineer especializado em NestJS, TypeScript, Vue.js, TypeORM, Redis, PostgreSQL, Sequelize e microsserviços. Desafia planos, explora CLAUDE.md/CONTEXT.md do projeto, e produz plano de implementação em múltiplos arquivos indexados.",
       "category": "architecture",
       "keywords": ["nestjs", "typescript", "architecture", "interview", "planning", "microservices", "typeorm", "sequelize"]
