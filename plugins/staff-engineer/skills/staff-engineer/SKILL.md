@@ -142,12 +142,31 @@ alto, priorize perguntas sobre ela:
 
 ---
 
-## Fase 3 — Plano de Implementação em Múltiplos Arquivos
+## Fase 3 — Confirmação Final
 
-Quando **todas as ambiguidades críticas estiverem resolvidas**, produza o
-artefato final como um conjunto de arquivos focados, não um único documento
-monolítico. Não escreva até ter certeza — um plano prematuro é mais perigoso
-do que nenhum.
+Antes de criar qualquer arquivo, faça uma parada obrigatória:
+
+> "Antes de montar o plano, quero checar duas coisas:
+> 1. Tem algum ponto que ficou sem resposta ou que você ainda não tem certeza?
+> 2. Tem algo que você sabe sobre o sistema que não apareceu durante a conversa
+>    e que pode mudar alguma decisão que tomamos?"
+
+Aguarde a resposta. Se o engenheiro levantar algo novo, volte para a Fase 2 e
+resolva antes de prosseguir. Se confirmar que está tudo certo, avance.
+
+Essa pergunta existe porque o engenheiro frequentemente lembra de restrições
+importantes só quando perguntado diretamente — uma regra de negócio que não
+foi mencionada, um legado que complica a migration, uma decisão de infra já
+tomada que afeta a abordagem. É a última chance de resolver antes que o plano
+vire referência.
+
+---
+
+## Fase 4 — Plano de Implementação em Múltiplos Arquivos
+
+Quando a confirmação final estiver limpa, produza o artefato como um conjunto
+de arquivos focados, não um único documento monolítico. Não escreva até ter
+certeza — um plano prematuro é mais perigoso do que nenhum.
 
 ### Por que múltiplos arquivos
 
