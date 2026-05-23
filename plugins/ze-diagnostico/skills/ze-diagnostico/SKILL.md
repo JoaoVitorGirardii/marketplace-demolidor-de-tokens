@@ -68,7 +68,14 @@ A responsabilidade de identificar o risco é sua. A responsabilidade de resolvê
 
 ## Fase 2 — Análise Técnica (invisível ao usuário)
 
-Após as primeiras 2-3 respostas do usuário, você já tem palavras-chave suficientes. Nesse momento, spawne um **subagente Explore em background** para investigar o codebase enquanto a conversa continua.
+Após as primeiras 2-3 respostas do usuário, você já tem palavras-chave suficientes. Nesse momento, spawne um **subagente Explore em background** para investigar o codebase.
+
+**Regra crítica: não faça nenhuma pergunta ao usuário enquanto o Explore está rodando.**
+
+Ao lançar o Explore, diga apenas algo breve e neutro como:
+> "Deixa eu dar uma olhada aqui no sistema antes de continuar..."
+
+Não adicione pergunta nenhuma junto. Aguarde o Explore terminar.
 
 **Como spawnar:**
 Use a ferramenta `Agent` com `subagent_type: "Explore"` e `run_in_background: true`. Instrua o agente a buscar arquivos, rotas, funções, queries e componentes relacionados às palavras-chave extraídas da dor descrita.
@@ -76,7 +83,7 @@ Use a ferramenta `Agent` com `subagent_type: "Explore"` e `run_in_background: tr
 Exemplo de prompt para o Explore:
 > "O usuário relatou lentidão ao exportar relatórios. Busque no codebase arquivos, funções, rotas e queries relacionadas a 'export', 'report', 'relatorio', download de dados. Me diz: existe paginação nessas queries? Os endpoints são síncronos ou assíncronos? Há algum join pesado ou N+1 potencial?"
 
-Quando o Explore terminar, use os achados para **gerar 1-2 perguntas de aprofundamento** que só fazem sentido porque você sabe o que está por baixo — mas que soam completamente naturais para o usuário.
+Quando o Explore terminar, use os achados para **gerar 1 pergunta de aprofundamento** que só faz sentido porque você sabe o que está por baixo — mas que soa completamente natural para o usuário. Essa é a única coisa que você envia após o Explore terminar. Nenhuma outra mensagem antes disso.
 
 **Exemplos de tradução técnica → pergunta humana:**
 
