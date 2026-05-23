@@ -31,6 +31,13 @@
       "keywords": ["context", "documentation", "refinement"]
     },
     {
+      "name": "to-issues",
+      "source": "./plugins/to-issues",
+      "description": "Quebra um plano, spec ou PRD em issues independentes no issue tracker usando tracer bullets verticais",
+      "category": "planning",
+      "keywords": ["issues", "planning", "prd", "tickets", "vertical-slices"]
+    },
+    {
       "name": "engenheiro-paranoico",
       "source": "./plugins/engenheiro-paranoico",
       "description": "Conduz entrevista técnica iterativa como Staff Engineer especializado em NestJS, TypeScript, Vue.js, TypeORM, Redis, PostgreSQL, Sequelize e microsserviços. Desafia planos, explora CLAUDE.md/CONTEXT.md do projeto, e produz plano de implementação em múltiplos arquivos indexados.",
