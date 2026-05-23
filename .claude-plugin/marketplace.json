@@ -10,43 +10,43 @@
   },
   "plugins": [
     {
-      "name": "merge-from-master",
-      "source": "./plugins/merge-from-master",
+      "name": "jvg-merge-from-master",
+      "source": "./plugins/jvg-merge-from-master",
       "description": "Traz alterações do master/main para a branch atual via merge, abortando se houver conflitos",
       "category": "git",
       "keywords": ["git", "merge", "branch", "sync"]
     },
     {
-      "name": "analyze-codebase",
-      "source": "./plugins/analyze-codebase",
+      "name": "jvg-analyze-codebase",
+      "source": "./plugins/jvg-analyze-codebase",
       "description": "Analisa o código e gera CONTEXT.md otimizado para o Claude Code",
       "category": "documentation",
       "keywords": ["context", "documentation", "analysis", "codebase"]
     },
     {
-      "name": "refine-context",
-      "source": "./plugins/refine-context",
+      "name": "jvg-refine-context",
+      "source": "./plugins/jvg-refine-context",
       "description": "Atualiza cirurgicamente um CONTEXT.md existente perguntando antes de escrever",
       "category": "documentation",
       "keywords": ["context", "documentation", "refinement"]
     },
     {
-      "name": "to-issues",
-      "source": "./plugins/to-issues",
+      "name": "jvg-to-issues",
+      "source": "./plugins/jvg-to-issues",
       "description": "Quebra um plano, spec ou PRD em issues independentes no issue tracker usando tracer bullets verticais",
       "category": "planning",
       "keywords": ["issues", "planning", "prd", "tickets", "vertical-slices"]
     },
     {
-      "name": "engenheiro-paranoico",
-      "source": "./plugins/engenheiro-paranoico",
+      "name": "jvg-engenheiro-paranoico",
+      "source": "./plugins/jvg-engenheiro-paranoico",
       "description": "Conduz entrevista técnica iterativa como Staff Engineer especializado em NestJS, TypeScript, Vue.js, TypeORM, Redis, PostgreSQL, Sequelize e microsserviços. Desafia planos, explora CLAUDE.md/CONTEXT.md do projeto, e produz plano de implementação em múltiplos arquivos indexados.",
       "category": "architecture",
       "keywords": ["nestjs", "typescript", "architecture", "interview", "planning", "microservices", "typeorm", "sequelize"]
     },
     {
-      "name": "ze-diagnostico",
-      "source": "./plugins/ze-diagnostico",
+      "name": "jvg-ze-diagnostico",
+      "source": "./plugins/jvg-ze-diagnostico",
       "description": "P.O. empático que investiga dores do usuário antes de abrir issues. Conduz conversa para entender problema e impacto, analisa código em background, verifica duplicidade no GitHub Issues e gera ticket estruturado com User Story + Critérios de Aceite — sempre com aprovação do usuário.",
       "category": "planning",
       "keywords": ["po", "product-owner", "diagnostico", "issues", "tickets", "investigacao", "dor", "problema"]

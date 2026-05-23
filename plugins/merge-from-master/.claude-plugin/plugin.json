@@ -1,4 +1,0 @@
-{
-  "name": "merge-from-master",
-  "description": "Traz todas as alterações da branch principal (master ou main) para a branch atual via merge. Aborta automaticamente se houver conflitos."
-}
