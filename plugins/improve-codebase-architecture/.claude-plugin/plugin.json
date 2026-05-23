@@ -1,0 +1,4 @@
+{
+  "name": "improve-codebase-architecture",
+  "description": "Encontra oportunidades de deepening na arquitetura — refactors que transformam módulos rasos em profundos. Guiado pelo CONTEXT.md e ADRs do projeto."
+}

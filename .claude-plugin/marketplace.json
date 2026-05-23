@@ -1,0 +1,62 @@
+{
+  "name": "demolidor-de-tokens",
+  "description": "Skills pessoais de João Vitor Girardi para Claude Code — análise de codebase, grilling de design, arquitetura e automações de git.",
+  "owner": {
+    "name": "João Vitor Girardi",
+    "email": "joao.vitor.girardii@gmail.com"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "merge-from-master",
+      "source": "./plugins/merge-from-master",
+      "description": "Traz alterações do master/main para a branch atual via merge, abortando se houver conflitos",
+      "category": "git",
+      "keywords": ["git", "merge", "branch", "sync"]
+    },
+    {
+      "name": "analyze-codebase",
+      "source": "./plugins/analyze-codebase",
+      "description": "Analisa o código e gera CONTEXT.md otimizado para o Claude Code",
+      "category": "documentation",
+      "keywords": ["context", "documentation", "analysis", "codebase"]
+    },
+    {
+      "name": "refine-context",
+      "source": "./plugins/refine-context",
+      "description": "Atualiza cirurgicamente um CONTEXT.md existente perguntando antes de escrever",
+      "category": "documentation",
+      "keywords": ["context", "documentation", "refinement"]
+    },
+    {
+      "name": "grill-me",
+      "source": "./plugins/grill-me",
+      "description": "Entrevista relentlessly sobre planos e designs até atingir entendimento compartilhado",
+      "category": "design",
+      "keywords": ["design", "planning", "interview", "decision-making"]
+    },
+    {
+      "name": "grill-with-docs",
+      "source": "./plugins/grill-with-docs",
+      "description": "Grilling que desafia planos contra o modelo de domínio e atualiza CONTEXT.md e ADRs inline",
+      "category": "design",
+      "keywords": ["design", "domain", "adr", "documentation", "grilling"]
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "source": "./plugins/improve-codebase-architecture",
+      "description": "Encontra oportunidades de deepening arquitetural — refactors que transformam módulos rasos em profundos",
+      "category": "architecture",
+      "keywords": ["architecture", "refactoring", "design", "modules", "depth"]
+    },
+    {
+      "name": "find-skills",
+      "source": "./plugins/find-skills",
+      "description": "Descobre e instala skills do ecossistema open agent skills via npx skills",
+      "category": "productivity",
+      "keywords": ["skills", "discovery", "marketplace", "extensions"]
+    }
+  ]
+}
