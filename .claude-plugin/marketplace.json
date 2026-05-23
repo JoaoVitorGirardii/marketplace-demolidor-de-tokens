@@ -43,6 +43,13 @@
       "description": "Conduz entrevista técnica iterativa como Staff Engineer especializado em NestJS, TypeScript, Vue.js, TypeORM, Redis, PostgreSQL, Sequelize e microsserviços. Desafia planos, explora CLAUDE.md/CONTEXT.md do projeto, e produz plano de implementação em múltiplos arquivos indexados.",
       "category": "architecture",
       "keywords": ["nestjs", "typescript", "architecture", "interview", "planning", "microservices", "typeorm", "sequelize"]
+    },
+    {
+      "name": "ze-diagnostico",
+      "source": "./plugins/ze-diagnostico",
+      "description": "P.O. empático que investiga dores do usuário antes de abrir issues. Conduz conversa para entender problema e impacto, analisa código em background, verifica duplicidade no GitHub Issues e gera ticket estruturado com User Story + Critérios de Aceite — sempre com aprovação do usuário.",
+      "category": "planning",
+      "keywords": ["po", "product-owner", "diagnostico", "issues", "tickets", "investigacao", "dor", "problema"]
     }
   ]
 }

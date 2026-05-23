@@ -11,6 +11,7 @@ Skills para o Claude Code desenvolvidas e refinadas por mim ao longo do tempo. C
 | `merge-from-master` | Traz as alterações do `master`/`main` para a branch atual via merge; aborta automaticamente se houver conflitos |
 | `to-issues` | Quebra um plano, spec ou PRD em issues independentes no issue tracker usando tracer bullets verticais — propõe slices, valida com o usuário e publica na ordem correta de dependência |
 | `engenheiro-paranoico` | Conduz entrevista técnica iterativa como Staff Engineer especializado em NestJS, TypeScript, Vue.js, TypeORM, Sequelize e microsserviços — desafia planos, encontra riscos ocultos e produz documento de implementação estruturado |
+| `ze-diagnostico` | P.O. empático que investiga dores do usuário antes de abrir qualquer issue — conduz conversa para entender o problema e impacto real, analisa o código em background, verifica duplicidade no GitHub Issues e gera ticket estruturado com User Story + Critérios de Aceite, sempre com aprovação do usuário |
 
 ## Como instalar
 
@@ -35,6 +36,7 @@ claude plugin install ./plugins/refine-context
 claude plugin install ./plugins/merge-from-master
 claude plugin install ./plugins/to-issues
 claude plugin install ./plugins/engenheiro-paranoico
+claude plugin install ./plugins/ze-diagnostico
 ```
 
 Ou instale todos de uma vez:
@@ -53,6 +55,7 @@ Após instalar, as skills ficam disponíveis como slash commands em qualquer pro
 /merge-from-master
 /to-issues
 /engenheiro-paranoico
+/ze-diagnostico
 ```
 
 ### Atualizando
