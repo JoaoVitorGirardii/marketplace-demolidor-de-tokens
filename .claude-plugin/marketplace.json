@@ -50,6 +50,13 @@
       "description": "P.O. empático que investiga dores do usuário antes de abrir issues. Conduz conversa para entender problema e impacto, analisa código em background, verifica duplicidade no GitHub Issues e gera ticket estruturado com User Story + Critérios de Aceite — sempre com aprovação do usuário.",
       "category": "planning",
       "keywords": ["po", "product-owner", "diagnostico", "issues", "tickets", "investigacao", "dor", "problema"]
+    },
+    {
+      "name": "jvg-analise-tecnica",
+      "source": "./plugins/jvg-analise-tecnica",
+      "description": "Engenheiro investigador que analisa um problema técnico em profundidade antes de propor qualquer solução. Explora código, mapeia dependências, investiga banco, logs, APIs e performance. Conduz conversa guiada ao longo de toda a investigação e só gera documento técnico com opções, tradeoffs e estimativas após aprovação explícita.",
+      "category": "planning",
+      "keywords": ["analise", "investigacao", "tecnica", "arquitetura", "dependencias", "performance", "debito-tecnico", "tradeoffs", "impacto"]
     }
   ]
 }
