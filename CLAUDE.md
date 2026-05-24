@@ -54,3 +54,4 @@ claude plugin marketplace add joao-vitor-girardi/marketplace-demolidor-de-tokens
 | `jvg-engenheiro-paranoico` | arquitetura |
 | `jvg-ze-diagnostico` | planejamento |
 | `jvg-analise-tecnica` | planejamento |
+| `jvg-plano-de-execucao` | planejamento |

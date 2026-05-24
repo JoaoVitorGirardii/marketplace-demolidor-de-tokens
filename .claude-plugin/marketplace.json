@@ -57,6 +57,13 @@
       "description": "Engenheiro investigador que analisa um problema técnico em profundidade antes de propor qualquer solução. Explora código, mapeia dependências, investiga banco, logs, APIs e performance. Conduz conversa guiada ao longo de toda a investigação e só gera documento técnico com opções, tradeoffs e estimativas após aprovação explícita.",
       "category": "planning",
       "keywords": ["analise", "investigacao", "tecnica", "arquitetura", "dependencias", "performance", "debito-tecnico", "tradeoffs", "impacto"]
+    },
+    {
+      "name": "jvg-plano-de-execucao",
+      "source": "./plugins/jvg-plano-de-execucao",
+      "description": "Tomador de decisão técnico que recebe uma análise técnica pronta e a transforma em issues vertical-slice publicadas no GitHub. Conduz conversa guiada para escolher a abordagem, definir contratos, migrações, rollout, observabilidade e testes. Cada issue é deployável sozinha. Publica somente após aprovação explícita do usuário.",
+      "category": "planning",
+      "keywords": ["plano-execucao", "execucao", "decisao", "issues", "vertical-slice", "rollout", "migracao", "contratos", "observabilidade", "github"]
     }
   ]
 }
