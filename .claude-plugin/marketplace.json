@@ -1,6 +1,6 @@
 {
   "name": "demolidor-de-tokens",
-  "description": "Skills pessoais de João Vitor Girardi para Claude Code — análise de codebase, grilling de design, arquitetura e automações de git.",
+  "description": "Skills pessoais de João Vitor Girardi para Claude Code — análise de codebase, planejamento de feature, investigação técnica e automações de git.",
   "owner": {
     "name": "João Vitor Girardi",
     "email": "joao.vitor.girardii@gmail.com"
@@ -17,53 +17,46 @@
       "keywords": ["git", "merge", "branch", "sync"]
     },
     {
-      "name": "jvg-analyze-codebase",
-      "source": "./plugins/jvg-analyze-codebase",
+      "name": "jvg-gerar-context",
+      "source": "./plugins/jvg-gerar-context",
       "description": "Analisa o código e gera CONTEXT.md otimizado para o Claude Code",
       "category": "documentation",
       "keywords": ["context", "documentation", "analysis", "codebase"]
     },
     {
-      "name": "jvg-refine-context",
-      "source": "./plugins/jvg-refine-context",
+      "name": "jvg-refinar-context",
+      "source": "./plugins/jvg-refinar-context",
       "description": "Atualiza cirurgicamente um CONTEXT.md existente perguntando antes de escrever",
       "category": "documentation",
       "keywords": ["context", "documentation", "refinement"]
     },
     {
-      "name": "jvg-to-issues",
-      "source": "./plugins/jvg-to-issues",
-      "description": "Quebra um plano, spec ou PRD em issues independentes no issue tracker usando tracer bullets verticais",
-      "category": "planning",
-      "keywords": ["issues", "planning", "prd", "tickets", "vertical-slices"]
-    },
-    {
-      "name": "jvg-engenheiro-paranoico",
-      "source": "./plugins/jvg-engenheiro-paranoico",
-      "description": "Conduz entrevista técnica iterativa como Staff Engineer especializado em NestJS, TypeScript, Vue.js, TypeORM, Redis, PostgreSQL, Sequelize e microsserviços. Desafia planos, explora CLAUDE.md/CONTEXT.md do projeto, e produz plano de implementação em múltiplos arquivos indexados.",
+      "name": "jvg-planejar-feature",
+      "source": "./plugins/jvg-planejar-feature",
+      "description": "Conduz entrevista técnica iterativa para validar planos de implementação em NestJS, TypeScript, Vue.js, TypeORM, Redis, PostgreSQL, Sequelize e microsserviços. Desafia planos, explora CLAUDE.md/CONTEXT.md do projeto, e produz plano de implementação em múltiplos arquivos indexados.",
       "category": "architecture",
-      "keywords": ["nestjs", "typescript", "architecture", "interview", "planning", "microservices", "typeorm", "sequelize"]
+      "keywords": ["nestjs", "typescript", "architecture", "interview", "planning", "microservices", "typeorm", "sequelize", "feature"]
     },
     {
-      "name": "jvg-ze-diagnostico",
-      "source": "./plugins/jvg-ze-diagnostico",
-      "description": "P.O. empático que investiga dores do usuário antes de abrir issues. Conduz conversa para entender problema e impacto, analisa código em background, verifica duplicidade no GitHub Issues e gera ticket estruturado com User Story + Critérios de Aceite — sempre com aprovação do usuário.",
+      "name": "jvg-investigar-dor",
+      "source": "./plugins/jvg-investigar-dor",
+      "description": "Investiga dores de usuário antes de abrir issues. Conduz conversa para entender problema e impacto, analisa código em background, verifica duplicidade no GitHub Issues e gera ticket estruturado com User Story + Critérios de Aceite — sempre com aprovação do usuário.",
       "category": "planning",
-      "keywords": ["po", "product-owner", "diagnostico", "issues", "tickets", "investigacao", "dor", "problema"]
+      "keywords": ["dor", "issues", "tickets", "investigacao", "problema", "usuario", "produto"]
     },
     {
-      "name": "jvg-analise-tecnica",
-      "source": "./plugins/jvg-analise-tecnica",
-      "description": "Engenheiro investigador que analisa um problema técnico em profundidade antes de propor qualquer solução. Explora código, mapeia dependências, investiga banco, logs, APIs e performance. Conduz conversa guiada ao longo de toda a investigação e só gera documento técnico com opções, tradeoffs e estimativas após aprovação explícita.",
+      "name": "jvg-investigar-problema",
+      "source": "./plugins/jvg-investigar-problema",
+      "description": "Analisa um problema técnico em profundidade antes de propor qualquer solução. Explora código, mapeia dependências, investiga banco, logs, APIs e performance. Conduz conversa guiada ao longo de toda a investigação e só gera documento técnico com opções, tradeoffs e estimativas após aprovação explícita.",
       "category": "planning",
       "keywords": ["analise", "investigacao", "tecnica", "arquitetura", "dependencias", "performance", "debito-tecnico", "tradeoffs", "impacto"]
     },
     {
-      "name": "jvg-plano-de-execucao",
-      "source": "./plugins/jvg-plano-de-execucao",
-      "description": "Tomador de decisão técnico que recebe uma análise técnica pronta e a transforma em issues vertical-slice publicadas no GitHub. Conduz conversa guiada para escolher a abordagem, definir contratos, migrações, rollout, observabilidade e testes. Cada issue é deployável sozinha. Publica somente após aprovação explícita do usuário.",
+      "name": "jvg-quebrar-em-issues",
+      "source": "./plugins/jvg-quebrar-em-issues",
+      "description": "Recebe uma análise técnica pronta e a transforma em issues vertical-slice publicadas no GitHub. Conduz conversa guiada para escolher a abordagem, definir contratos, migrações, rollout, observabilidade e testes. Cada issue é deployável sozinha. Publica somente após aprovação explícita do usuário.",
       "category": "planning",
-      "keywords": ["plano-execucao", "execucao", "decisao", "issues", "vertical-slice", "rollout", "migracao", "contratos", "observabilidade", "github"]
+      "keywords": ["execucao", "decisao", "issues", "vertical-slice", "rollout", "migracao", "contratos", "observabilidade", "github"]
     }
   ]
 }

@@ -1,0 +1,4 @@
+{
+  "name": "jvg-investigar-dor",
+  "description": "Investiga dores de usuário antes de abrir issues. Conduz conversa para entender problema e impacto, analisa código em background, verifica duplicidade no GitHub Issues e gera ticket estruturado com User Story + Critérios de Aceite — sempre com aprovação do usuário."
+}

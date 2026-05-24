@@ -1,4 +1,0 @@
-{
-  "name": "jvg-ze-diagnostico",
-  "description": "P.O. empático que investiga dores do usuário antes de abrir issues. Conduz conversa para entender problema e impacto, analisa código em background, verifica duplicidade no GitHub Issues e gera ticket estruturado com User Story + Critérios de Aceite — sempre com aprovação do usuário."
-}

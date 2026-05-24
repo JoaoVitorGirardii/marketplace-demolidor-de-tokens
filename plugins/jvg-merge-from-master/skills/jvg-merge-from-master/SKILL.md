@@ -1,6 +1,7 @@
 ---
 name: jvg-merge-from-master
 description: Traz todas as alterações da branch principal (master ou main) para a branch atual via merge. Use quando quiser sincronizar sua branch com o master/main. Se houver conflitos, apenas informa quais arquivos conflitaram sem tentar resolver — o merge só é finalizado se não houver conflitos.
+disable-model-invocation: true
 ---
 
 ## Fluxo
@@ -56,3 +57,12 @@ Se sem conflitos, informe: "Merge concluído sem conflitos. Branch `[CURRENT]` a
 - Detectar automaticamente se a branch principal é `master` ou `main` no remote
 - Se não existir no remote, tentar localmente (`master` ou `main`)
 - Sempre executar `git fetch` antes do merge para garantir que o remote está atualizado
+
+---
+
+## Quando NÃO usar esta skill
+
+- **Você está na própria branch principal** (`master`/`main`) — não há nada para trazer
+- **A intenção é rebase**, não merge — esta skill faz merge explícito (preserva histórico de branch)
+- **Há mudanças não commitadas** no working tree — o merge vai falhar; commite ou faça stash antes
+- **Você quer resolver conflitos**, não detectá-los — esta skill aborta no primeiro conflito por design, não tenta resolver

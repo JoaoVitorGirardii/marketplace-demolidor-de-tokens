@@ -1,0 +1,4 @@
+{
+  "name": "jvg-gerar-context",
+  "description": "Analisa o código-fonte do projeto e produz um CONTEXT.md otimizado para o Claude Code — regras, contratos e padrões que guiam o modelo em sessões futuras."
+}

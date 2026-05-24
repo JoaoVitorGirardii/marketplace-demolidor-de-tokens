@@ -1,4 +1,0 @@
-{
-  "name": "jvg-plano-de-execucao",
-  "description": "Tomador de decisão técnico que recebe uma análise técnica pronta e a transforma em issues vertical-slice publicadas no GitHub. Conduz conversa guiada para escolher a abordagem, definir contratos, migrações, rollout, observabilidade e testes. Cada issue é deployável sozinha. Publica somente após aprovação explícita do usuário."
-}

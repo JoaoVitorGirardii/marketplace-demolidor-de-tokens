@@ -47,11 +47,10 @@ claude plugin marketplace add joao-vitor-girardi/marketplace-demolidor-de-tokens
 
 | Skill | Categoria |
 |---|---|
-| `jvg-analyze-codebase` | documentação |
-| `jvg-refine-context` | documentação |
+| `jvg-gerar-context` | documentação |
+| `jvg-refinar-context` | documentação |
 | `jvg-merge-from-master` | git |
-| `jvg-to-issues` | planejamento |
-| `jvg-engenheiro-paranoico` | arquitetura |
-| `jvg-ze-diagnostico` | planejamento |
-| `jvg-analise-tecnica` | planejamento |
-| `jvg-plano-de-execucao` | planejamento |
+| `jvg-planejar-feature` | arquitetura |
+| `jvg-investigar-dor` | planejamento |
+| `jvg-investigar-problema` | planejamento |
+| `jvg-quebrar-em-issues` | planejamento |

@@ -1,0 +1,4 @@
+{
+  "name": "jvg-refinar-context",
+  "description": "Atualiza cirurgicamente um CONTEXT.md existente perguntando antes de escrever."
+}
