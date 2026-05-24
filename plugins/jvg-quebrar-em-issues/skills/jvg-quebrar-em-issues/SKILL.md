@@ -53,6 +53,20 @@ Quando a análise estiver utilizável, confirme entendimento em 3-5 linhas:
 
 Aguarde confirmação ou correção antes de avançar.
 
+### Documentos auxiliares (opcional, mas pergunte)
+
+Antes de avançar para a decisão, pergunte se há um documento de **investigação de dor** vinculado (tipicamente gerado por `/jvg-investigar-dor`):
+
+> "Existe um `.md` de investigação de dor relacionado a essa análise? Se sim, me passa o caminho — ele traz 'como faz hoje', user story e riscos para outros usuários que vou querer incluir na issue final."
+
+Se houver, leia com `Read` e guarde para a Fase 5:
+
+- **Como faz hoje** → vai para "Comportamento atual vs. esperado" na issue
+- **User story / persona** → entra como contexto da issue
+- **Riscos para outros** → entram nos riscos da slice afetada
+
+Se o usuário disser que não há, siga em frente — esses campos serão preenchidos a partir do "Problema Investigado" da análise técnica.
+
 ---
 
 ## Fase 2 — Decisão da Abordagem
@@ -190,20 +204,84 @@ Itere até o usuário aprovar a lista. Não avance com lista provisória.
 
 ## Fase 5 — Detalhamento de Cada Issue
 
+### Antes de montar as issues, leia o contexto do projeto
+
+Para preencher a seção "Padrões do projeto a seguir" com regras concretas (não com "veja o CONTEXT.md"), leia os arquivos de contexto:
+
+```bash
+ls CLAUDE.md CONTEXT.md 2>/dev/null
+```
+
+Se existirem, leia-os com `Read`. Para cada fatia, identifique 3-5 regras que são **diretamente aplicáveis** ao tipo de mudança (ex: se a fatia toca migration, as regras de migration; se toca controller, as de controller). Essas regras vão ser **copiadas literalmente** dentro de cada issue — o implementador que pegar a issue pode não ter o `CLAUDE.md` em mãos.
+
+Se nenhum dos dois existir, registre como ponto a investigar na seção "Padrões do projeto" da issue, e pergunte ao usuário se há outro lugar onde estão as convenções do time.
+
+### Template da issue
+
 Para cada slice aprovada, monte o corpo da issue antes de publicar. Use este template:
 
 ```markdown
 ## O que entrega
 
-[Descrição do comportamento end-to-end que essa issue entrega — pense no que o sistema *passa a fazer*, não em "criar a função X". Linguagem voltada para quem vai implementar.]
+[Comportamento end-to-end que o sistema passa a fazer. Linguagem do tipo "sistema agora aceita X e responde Y", não "criar função X".]
+
+## Comportamento atual vs. esperado
+
+**Hoje:** [como o sistema/usuário faz hoje — herdado do "Como faz hoje" da investigar-dor ou do "Problema Investigado" da análise técnica]
+
+**Depois desta fatia:** [como passa a ser]
 
 ## Decisões já tomadas
 
 - **Abordagem**: [resumo da abordagem escolhida na Fase 2]
-- **Contrato**: [se aplicável — endpoint, evento, schema. Omita se não houver]
-- **Migração**: [se aplicável — qual mudança de schema, com ou sem backfill. Omita se não houver]
+- **Contrato**: [endpoint, evento, schema — ver seção "Contratos" abaixo. Omita se não houver]
+- **Migração**: [mudança de schema — ver seção "Migração" abaixo. Omita se não houver]
 - **Rollout**: [feature flag, percentual, big-bang. Omita se não for relevante]
 - **Observabilidade**: [logs / métricas / alertas que esta issue deve instrumentar]
+
+## Arquivos e símbolos relevantes
+
+Onde mexer (copie do "Achados Técnicos" da análise):
+
+- `caminho/do/arquivo.ts:42` — [o que tem ali e o que muda]
+- `caminho/outro.service.ts` — [classe/método relevante]
+- `test/foo.e2e-spec.ts` — [padrão de teste a seguir]
+
+Se a análise não trouxe referências `arquivo:linha`, registre explicitamente que o implementador precisa explorar antes — não invente paths.
+
+## Contratos
+
+Copie o schema completo — request, response, evento, payload — direto aqui. Não escreva "ver análise técnica"; quem implementa pode estar lendo só esta issue no GitHub.
+
+Inclua: método HTTP + path, headers relevantes, body de entrada (com tipos), status codes esperados, body de resposta. Para eventos: nome do evento, versão, payload completo, contrato de idempotência.
+
+Omita esta seção se a fatia não cria/altera contrato.
+
+## Migração
+
+Copie o SQL/código da migration ou descreva exatamente a mudança de schema. Inclua: nome do arquivo de migration, estratégia (NOT NULL com default, nullable com backfill, etc.) e como reverter.
+
+Omita esta seção se não houver mudança de banco.
+
+## Padrões do projeto a seguir
+
+Copie literalmente — **não cite** — as 3-5 regras do `CLAUDE.md`/`CONTEXT.md` que se aplicam a esta fatia. Exemplos do tipo de regra a copiar (extraia do projeto real, não estas):
+
+- "Toda migration precisa ter `down()` implementado e ser idempotente."
+- "Services nunca instanciam colaboradores com `new` — sempre via DI do NestJS."
+- "Eventos publicados precisam ser versionados (`event.v1`, `event.v2`)."
+
+Se o projeto não tem `CLAUDE.md`/`CONTEXT.md`, omita esta seção e registre como ponto a investigar.
+
+## Como validar localmente
+
+Comandos que o implementador roda para validar a fatia antes de subir. Exemplos (ajuste ao stack real do projeto):
+
+- `npm run lint`
+- `npm run test src/foo`
+- `npm run test:e2e -- foo.e2e-spec`
+
+Se o projeto não tem padrão claro de validação local, registre como ponto a confirmar.
 
 ## Critérios de aceite
 
@@ -215,7 +293,7 @@ Para cada slice aprovada, monte o corpo da issue antes de publicar. Use este tem
 
 ## Contexto
 
-[Referência à análise técnica que originou o plano (link, path, ou cole o resumo). Notas relevantes que ajudam quem vai implementar a entender por que estamos fazendo isso desta forma.]
+Por que essa fatia existe — o problema que ela resolve em uma ou duas frases. Se houver análise técnica em link público (PR, wiki), inclua o link. **Não cite path local** — o implementador pode não ter acesso ao arquivo.
 
 ## Riscos desta fatia
 
@@ -232,7 +310,11 @@ Quando o formato estiver aprovado, monte os demais. Apresente todos em sequênci
 
 Antes de chamar `gh issue create`, releia **cada issue** e verifique:
 
+- [ ] **Auto-suficiência**: alguém abrindo só esta issue no GitHub (sem acesso aos `.md` locais) consegue implementar — se precisar abrir a análise técnica fora, copie o trecho necessário para dentro da issue
 - [ ] Esta issue, deployada **sozinha** em produção, agrega valor ou ao menos não quebra nada — se a resposta é "depende da issue X", junte as duas
+- [ ] Contratos, migrações e padrões do `CLAUDE.md`/`CONTEXT.md` estão **copiados literalmente** na issue, não citados por referência ("ver CLAUDE.md" não conta)
+- [ ] "Arquivos e símbolos relevantes" lista caminhos concretos (`path/arquivo.ts:42` quando aplicável) — se a análise não trouxe esse nível de detalhe, registre que o implementador precisa explorar (não invente paths)
+- [ ] "Comportamento atual vs. esperado" descreve ANTES e DEPOIS — se for greenfield, registre "não havia antes"
 - [ ] Tem ao menos um critério de aceite **verificável** (não "feature funciona", mas "endpoint X retorna 200 com payload Y")
 - [ ] As "Decisões já tomadas" referenciam apenas decisões confirmadas na Fase 3 — nada inventado para parecer completo
 - [ ] Se a issue tem migration, ela inclui também o código que consome a migration (sem dependência cruzada com outra issue)
