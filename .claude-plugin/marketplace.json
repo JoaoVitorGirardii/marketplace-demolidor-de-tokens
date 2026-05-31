@@ -57,6 +57,13 @@
       "description": "Recebe uma análise técnica pronta e a transforma em issues vertical-slice publicadas no GitHub. Conduz conversa guiada para escolher a abordagem, definir contratos, migrações, rollout, observabilidade e testes. Cada issue é deployável sozinha. Publica somente após aprovação explícita do usuário.",
       "category": "planning",
       "keywords": ["execucao", "decisao", "issues", "vertical-slice", "rollout", "migracao", "contratos", "observabilidade", "github"]
+    },
+    {
+      "name": "jvg-estudo-guiado",
+      "source": "./plugins/jvg-estudo-guiado",
+      "description": "Tutor de estudo focado em aplicação prática (conseguir FAZER, não decorar). Combate o excesso de conteúdo cortando para o caminho crítico — o mínimo que já permite trabalho real — e diz o que estudar primeiro e o que ignorar. Integra ensinar, fazer aplicar e cobrar explicação (Feynman) num loop só, e mantém um arquivo de progresso entre sessões, retomando pelos pontos onde o usuário travou.",
+      "category": "learning",
+      "keywords": ["estudo", "aprender", "habilidade", "pratica", "caminho-critico", "feynman", "treino", "tutor", "progresso"]
     }
   ]
 }

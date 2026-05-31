@@ -139,6 +139,24 @@ Funciona melhor com o documento de análise ou plano aberto na conversa.
 
 ---
 
+## Estudar uma habilidade (transversal ao fluxo acima)
+
+### `jvg-estudo-guiado`
+
+**Quando usar:** quando você quer **aprender, treinar ou dominar** um tópico ou habilidade prática — especialmente coisas ligadas ao trabalho ("quero aprender SQL", "preciso ficar bom em dar feedback") — ou quando traz um arquivo de progresso (`estudo-*.md`) para continuar de onde parou. É a única skill independente da pipeline de desenvolvimento acima.
+
+**O que faz:** corta o excesso de conteúdo para o **caminho crítico** — o mínimo que já permite fazer trabalho real — e diz o que estudar primeiro e o que ignorar. Conduz um loop de ensinar enxuto → fazer você **aplicar** → fazer você **explicar** com as próprias palavras (Feynman) → feedback, rígida na prática mas com uma saída de emergência se você pedir a resposta pronta. Mantém um arquivo `estudo-<tema>.md` entre sessões e retoma pelos pontos onde você travou.
+
+```
+/jvg-estudo-guiado quero aprender SQL pra puxar meus próprios relatórios de vendas
+```
+
+```
+/jvg-estudo-guiado            # anexe seu estudo-*.md para continuar de onde parou
+```
+
+---
+
 ## Fluxos de trabalho completos
 
 ### Projeto novo ou retorno após longa ausência
@@ -236,6 +254,7 @@ claude plugin install ./plugins/jvg-investigar-problema
 claude plugin install ./plugins/jvg-planejar-feature
 claude plugin install ./plugins/jvg-quebrar-em-issues
 claude plugin install ./plugins/jvg-merge-from-master
+claude plugin install ./plugins/jvg-estudo-guiado
 ```
 
 Ou instale todos de uma vez:
@@ -256,6 +275,7 @@ Após instalar, as skills ficam disponíveis como slash commands em qualquer pro
 /jvg-planejar-feature
 /jvg-quebrar-em-issues
 /jvg-merge-from-master
+/jvg-estudo-guiado
 ```
 
 ### Atualizando

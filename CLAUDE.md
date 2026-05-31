@@ -54,3 +54,4 @@ claude plugin marketplace add joao-vitor-girardi/marketplace-demolidor-de-tokens
 | `jvg-investigar-dor` | planejamento |
 | `jvg-investigar-problema` | planejamento |
 | `jvg-quebrar-em-issues` | planejamento |
+| `jvg-estudo-guiado` | aprendizado |
